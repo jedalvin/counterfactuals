@@ -12,3 +12,5 @@ def main_app():
     image_path = '/Users/jedalvin/projecthome_cover.png'
     st.image(image_path)
     st.markdown("Objective: ")
+    
+    st.title('Home Purchase Prediction')
