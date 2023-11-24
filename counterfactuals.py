@@ -6,11 +6,17 @@ import bcrypt
 from hashlib import sha256
 from io import StringIO
 
-# Main app
-def main_app():
-    # Display an image
-    image_path = '/Users/jedalvin/projecthome_cover.png'
-    st.image(image_path)
-    st.markdown("Objective: ")
-    
-    st.title('Home Purchase Prediction')
+# Your pre-trained model
+model = load_model('pipeline.joblib')
+
+st.title('Home Purchase Prediction')
+
+# File uploader widget
+uploaded_file = st.file_uploader("Choose a CSV file", type='csv')
+if uploaded_file is not None:
+    data = pd.read_csv(uploaded_file)
+    st.write('Data Preview:', data.head())
+
+# Run the app
+if __name__ == '__main__':
+    st.run()
