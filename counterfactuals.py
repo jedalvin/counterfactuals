@@ -11,6 +11,9 @@ model = load_model('pipeline.joblib')
 
 st.title('Home Purchase Prediction')
 
+# Display the cover image
+st.image('projecthome_cover.PNG', caption='Home Purchase Predictor')
+
 # File uploader widget
 uploaded_file = st.file_uploader("Choose a CSV file", type='csv')
 if uploaded_file is not None:
