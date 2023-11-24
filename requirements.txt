@@ -5,6 +5,6 @@ numpy
 datetime
 bcrypt
 openpyxl
-matplotlib.pyplot
+matplotlib
 time
 seaborn
