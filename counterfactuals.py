@@ -4,10 +4,11 @@ import datetime
 import os
 import bcrypt
 from hashlib import sha256
+from joblib import load
 from io import StringIO
 
 # Your pre-trained model
-model = load_model('pipeline.joblib')
+model = load('pipeline.joblib')
 
 st.title('Home Purchase Prediction')
 
